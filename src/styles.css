@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1.25rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #345;
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+.card img {
+  width: 100%;
+}
+
+button {
+  background-color: palevioletred;
+  border: transparent;
+  border-radius: 2px;
+  color: white;
+  padding: 0.25rem;
+}
+
+.modal-outer {
+  display: grid;
+  background: hsla(300, 16%, 29%, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  /* hiding modal */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-outer.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-inner {
+  max-width: 38rem;
+  min-width: 25rem;
+  min-height: 13rem;
+  border-radius: 5px;
+  background: hsla(300, 16%, 29%, 1);
+  padding: 2rem;
+}
